@@ -1,0 +1,25 @@
+{
+  "name": "ymaps-loader",
+  "version": "1.0.0",
+  "description": "Загрузчик Яндекс Карт",
+  "keywords": [
+    "loader",
+    "maps",
+    "yandex",
+    "yandex maps",
+    "ymaps"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexander-elgin/ymaps-loader.git"
+  },
+  "main": "src/index.js",
+  "engines": {
+    "npm": ">=3",
+    "node": ">=5"
+  },
+  "author": "Alexander Elgin",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
