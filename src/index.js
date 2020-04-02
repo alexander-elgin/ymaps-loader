@@ -1,17 +1,8 @@
-const load = ({ lang, region, apiKey }) => new Promise((resolve) => {
-    if (window.ymaps === undefined) {
-        const yandexMapScript = document.createElement('SCRIPT');
-        yandexMapScript.setAttribute('src',
-            `https://api-maps.yandex.ru/2.1/?lang=${lang || 'ru'}_${region || 'RU'}&apikey=${apiKey}`);
-        yandexMapScript.setAttribute('async', '');
-        yandexMapScript.setAttribute('defer', '');
-        yandexMapScript.setAttribute('type', 'text/javascript');
+const { loadScriptOnce } = require('remote-script-loader');
 
-        yandexMapScript.onload = () => ymaps.ready(resolve);
-        document.body.appendChild(yandexMapScript);
-    } else {
-        resolve();
-    }
-});
+const load = ({ lang, region, apiKey }) => new Promise(resolve => loadScriptOnce(
+    `https://api-maps.yandex.ru/2.1/?lang=${lang || 'ru'}_${region || 'RU'}&apikey=${apiKey}`,
+    'ymaps',
+).then(() => ymaps.ready(resolve)));
 
 module.exports = load;
