@@ -1,6 +1,6 @@
 {
   "name": "ymaps-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Загрузчик Яндекс Карт",
   "keywords": [
     "loader",
@@ -21,6 +21,6 @@
   "author": "Alexander Elgin",
   "license": "MIT",
   "dependencies": {
-    "remote-script-loader": "^1.0.0"
+    "remote-script-loader": "^1.0.1"
   }
 }
