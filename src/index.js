@@ -7,7 +7,7 @@ const load = function (options) {
         return remoteScriptLoader.loadScriptOnce(
             'https://api-maps.yandex.ru/2.1/?lang=' + (options.lang || 'ru') + '_' + (options.region || 'RU') +
             '&apikey=' + options.apiKey,
-            'ymaps',
+            'ymaps'
         ).then(function () { ymaps.ready(resolve); });
     });
 };
